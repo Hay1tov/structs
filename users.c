@@ -32,23 +32,16 @@ int main(){
         printf("%d. Telefon raqam: ", i+1);
         scanf("%s", users[i].phone);
     }
-    int count = users[total].birth_year;
-    printf("Foydalanuvchilar jadvali:\n First Name | Last Name | Birth Year | Location | Phone");
+    printf("Foydalanuvchilar jadvali:\nFirst Name | Last Name | Birth Year | Location | Phone\n---------------------------------------------------------");
 
     for (int i = 0; i < total; i++){
 
-        if (count <= users[i].birth_year )
-        {
-            printf("%15s", users[i].first_name);
-
-            printf("| %10s", users[i].last_name);
-
-            printf("| %8d", users[i].birth_year);
-
-            printf("| %s", users[i].location);
-
-            printf("| %s", users[i].phone);
-        }   
+       
+        printf("%16s", users[i].first_name);
+        printf("| %10s", users[i].last_name);
+        printf("| %11d", users[i].birth_year);
+        printf("| %9s", users[i].location);
+        printf("| %s", users[i].phone);   
     }
     return 0;
 }
